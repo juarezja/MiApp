@@ -24,4 +24,4 @@ def check_email(self,field):
 
 def check_username(self,field):
     if User.query.filter_by(username=field.data).first():
-        raise ValidationError(Username is Taken!')
+        raise ValidationError('Username is Taken!')
